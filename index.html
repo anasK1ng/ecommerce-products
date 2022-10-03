@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="font" href="https://fonts.google.com/specimen/Kumbh+Sans">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav__bar container">
+      <div class="nav__logo">
+        <img class="nav__toggle" src="images/icon-menu.svg" data-toggle />
+        <img class="img logo" src="images/logo.svg" alt="">
+      </div>
+      <ul class="nav__items">
+        <li class="item btn__close"><img src="images/icon-close.svg"/></li>
+        <li class="item"><a href="#">Collections</a></li>
+        <li class="item"><a href="#">Men</a></li>
+        <li class="item active-link"><a href="#">Women</a></li>
+        <li class="item"><a href="#">About</a></li>
+        <li class="item"><a href="#">Contact</a></li>
+      </ul>
+      <div class="nav__menu">
+        <div class="menu__cart">
+          <div class="cart__icon">
+            <img  src="images/icon-cart.svg"/>
+            <span class="cart__icon__number">0</span>
+          </div>
+          <div class="cart__section visible">
+            <h3 class="cart__title">Cart</h3>
+            <article class="cart__container">
+              <!-- <div class="cart__item">
+                <div class="cart__img">
+                  <img src="images/image-product-1-thumbnail.jpg" />
+                </div>
+                <div class="cart__data">
+                  <span class="cart__name">Fall Limited Edition Sneakers</span>
+                  <div class="cart__price__quantity"><span class="cart__price">$125.00</span> x <span class="cart__quantity">3</span></div>
+                  <span class="cart__calculate">$375.00</span>
+                </div>
+                <img class="btn__delete" src="images/icon-delete.svg" />
+              </div> -->
+            </article>
+            <div class="cart__footer">
+              <button class="btn cart__btn">Checkout</button>
+            </div>
+          </div>
+        </div>
+        <div class="menu__profile">
+          <img class="img img__profile" src="images/image-avatar.png"/>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="thumbnail">
+      <article  class="thumbnail__container"> 
+        <div class="btn thumbnail__btn" data-thumbnailbtn="previous"><img src="images/icon-next.svg"/></div>
+        <div class="btn thumbnail__btn" data-thumbnailbtn="next"> <img src="images/icon-previous.svg"/></div>
+        <img class="btn thumbnail__btn__close" src="images/icon-close.svg" />
+        <ul data-thumbnail>
+          <li class="thumbnail__item" data-active>
+            <img src="images/image-product-1.jpg"/>
+          </li>
+          <li class="thumbnail__item">
+            <img src="images/image-product-2.jpg"/>
+          </li>
+          <li class="thumbnail__item">
+            <img src="images/image-product-3.jpg"/>
+          </li>
+          <li class="thumbnail__item">
+            <img src="images/image-product-4.jpg"/>
+          </li>
+        </ul>
+      </article>
+      
+    </section>
+    <section class="section product">
+      <div class="product__container container">
+        <article class="product__images">
+          <div class="screen__img"><img src="images/image-product-1.jpg"></div>
+          <div class="img__item active-img"><img data-bigImg="images/image-product-1.jpg" src="images/image-product-1-thumbnail.jpg"></div>
+          <div class="img__item"><img data-bigImg="images/image-product-2.jpg" src="images/image-product-2-thumbnail.jpg"></div>
+          <div class="img__item"><img data-bigImg="images/image-product-3.jpg" src="images/image-product-3-thumbnail.jpg"></div>
+          <div class="img__item"><img data-bigImg="images/image-product-4.jpg" src="images/image-product-4-thumbnail.jpg"></div>
+        </article>
+        <article class="product__data">
+           <h4 class="data__sub__title">Sneaker Company</h4>
+           <h1 class="data__title">Fall Limited Edition Sneakers</h1>
+            <p class="data__paragraph">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+              durable rubber outer sole, they’ll withstand everything the weather can offer.</p>  
+            <div class="price__section">
+              <span class="price">$125.00</span>
+              <span class="discount">50%</span>
+              <span class="old__price"><del>$250.00</del></span>
+            </div>
+            <div class="checkin__section">
+              <div class="quantity__section">
+                <button type="button" class="btn btn__minus" btn-minus><img src="images/icon-minus.svg" /></button>
+                <span class="quantity">1</span>
+                <button type="button" class="btn btn__plus" btn-plus ><img src="images/icon-plus.svg" /></button>
+              </div>
+              <button type="button" class="btn btn__add"><img src="images/icon-cart.svg" /> Add to cart</button>
+            </div>
+        </article>
+      </div>
+    </section>
+    <section>
+      <div class="attribution container">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Anas Bouinghouren</a>.
+      </div>
+    </section>
+  </main>
+  
+  
+  <script src="js/main.js" type="Module"></script>
+</body>
+</html>

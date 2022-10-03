@@ -1,0 +1,72 @@
+
+.thumbnail{
+    padding: 3.7rem 0 0; 
+}
+.thumbnail__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.thumbnail__btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--White);
+    border-radius: 50%;
+    padding: .3rem .75rem;
+    z-index: 3; 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+.thumbnail__btn[data-thumbnailbtn="previous"]{
+    right: 1rem;   
+}
+.thumbnail__btn[data-thumbnailbtn="next"]{
+    left: 1rem;
+}
+[data-thumbnail]{
+    position: relative;
+    width: 100vw;
+    height:auto;
+}
+
+.thumbnail__item[data-active]{
+    opacity: 1;
+    z-index: 1;
+    position:relative;
+    transition-delay: 0ms;
+}
+.thumbnail__item{
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    transition: all .4s;
+    transition-delay: .2s;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+.thumbnail__btn__close{
+    display: none;
+}
+
+
+.thumbnail.thumbnail__show{
+        position: absolute;
+        background-color: rgba($color: #000000, $alpha: 0.75);
+        inset: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+}
